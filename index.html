@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PC Info App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-computer"></i> PC Hardware Information</h1>
+            <button id="refresh-btn"><i class="fas fa-sync-alt"></i> Refresh Data</button>
+        </header>
+
+        <div class="loading" id="loading">
+            <div class="spinner"></div>
+            <p>Loading system information...</p>
+        </div>
+
+        <div class="tab-container" id="tab-container" style="display: none;">
+            <div class="tab-nav">
+                <button class="tab-button active" data-tab="system"><i class="fas fa-desktop"></i> System</button>
+                <button class="tab-button" data-tab="cpu"><i class="fas fa-microchip"></i> CPU</button>
+                <button class="tab-button" data-tab="memory"><i class="fas fa-memory"></i> Memory</button>
+                <button class="tab-button" data-tab="storage"><i class="fas fa-hdd"></i> Storage</button>
+                <button class="tab-button" data-tab="graphics"><i class="fas fa-tv"></i> Graphics</button>
+                <button class="tab-button" data-tab="network"><i class="fas fa-network-wired"></i> Network</button>
+                <button class="tab-button" data-tab="monitoring"><i class="fas fa-chart-line"></i> Monitoring</button>
+            </div>
+
+            <div class="tab-content">
+                <!-- System Tab -->
+                <div class="tab-panel active" id="system-tab">
+                    <div class="info-section">
+                        <h2><i class="fas fa-info-circle"></i> System Overview</h2>
+                        <div class="info-grid">
+                            <div id="system-info"></div>
+                        </div>
+                    </div>
+                    <div class="info-section">
+                        <h2><i class="fab fa-windows"></i> Operating System</h2>
+                        <div class="info-grid">
+                            <div id="os-info"></div>
+                        </div>
+                    </div>
+                    <div class="info-section">
+                        <h2><i class="fas fa-circuit-board"></i> Motherboard</h2>
+                        <div class="info-grid">
+                            <div id="motherboard-info"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CPU Tab -->
+                <div class="tab-panel" id="cpu-tab">
+                    <div class="info-section">
+                        <h2><i class="fas fa-microchip"></i> CPU Information</h2>
+                        <div class="info-grid">
+                            <div id="cpu-info"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Memory Tab -->
+                <div class="tab-panel" id="memory-tab">
+                    <div class="info-section">
+                        <h2><i class="fas fa-memory"></i> Memory Information</h2>
+                        <div class="info-grid">
+                            <div id="memory-info"></div>
+                        </div>
+                    </div>
+                    <div class="info-section">
+                        <h2><i class="fas fa-th-large"></i> Memory Modules</h2>
+                        <div class="info-grid">
+                            <div id="memory-usage-info"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Storage Tab -->
+                <div class="tab-panel" id="storage-tab">
+                    <div class="info-section">
+                        <h2><i class="fas fa-hdd"></i> Storage Devices</h2>
+                        <div class="info-grid">
+                            <div id="storage-info"></div>
+                        </div>
+                    </div>
+                    <div class="info-section">
+                        <h2><i class="fas fa-chart-pie"></i> Disk Usage</h2>
+                        <div class="info-grid">
+                            <div id="disk-usage-info"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Graphics Tab -->
+                <div class="tab-panel" id="graphics-tab">
+                    <div class="info-section">
+                        <h2><i class="fas fa-tv"></i> Graphics Cards</h2>
+                        <div class="info-grid">
+                            <div id="graphics-info"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Network Tab -->
+                <div class="tab-panel" id="network-tab">
+                    <div class="info-section">
+                        <h2><i class="fas fa-network-wired"></i> Network Interfaces</h2>
+                        <div class="info-grid">
+                            <div id="network-info"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Monitoring Tab -->
+                <div class="tab-panel" id="monitoring-tab">
+                    <div class="info-section">
+                        <h2><i class="fas fa-thermometer-half"></i> CPU Load & Temperature</h2>
+                        <div class="info-grid">
+                            <div id="cpu-load-info"></div>
+                        </div>
+                    </div>
+                    <div class="info-section">
+                        <h2><i class="fas fa-list-ul"></i> Top Processes</h2>
+                        <div class="info-grid">
+                            <div id="processes-info"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="renderer.js"></script>
+</body>
+</html>

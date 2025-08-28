@@ -1,6 +1,6 @@
 # PC Info App
 
-A comprehensive Electron-based application that displays detailed computer hardware and system information. Perfect for PC builders, system administrators, and anyone who needs to quickly assess their computer's specifications.
+A Electron-based application that displays detailed computer hardware and system information.
 
 ## Features
 
@@ -13,7 +13,6 @@ A comprehensive Electron-based application that displays detailed computer hardw
 - **Motherboard**: Manufacturer, model, and version details
 - **Network Interfaces**: Speed, MAC addresses, and IP information
 - **Real-time Monitoring**: CPU load, temperature, memory usage, and top processes
-- **Modern UI**: Clean, responsive interface with dark gradient theme
 
 ## Installation & Usage
 
@@ -25,7 +24,7 @@ npm start
 
 ### Building the Application
 ```bash
-# Using electron-packager (recommended - no signing issues)
+# Using electron-packager 
 npm run package
 
 # The executable will be created in: release/pc-info-app-win32-x64/pc-info-app.exe

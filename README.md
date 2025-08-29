@@ -12,7 +12,8 @@ A Electron-based application that displays detailed computer hardware and system
 - **Storage Devices**: Disk types, sizes, interfaces, and real-time usage statistics
 - **Motherboard**: Manufacturer, model, and version details
 - **Network Interfaces**: Speed, MAC addresses, and IP information
-- **Real-time Monitoring**: CPU load, temperature, memory usage, and top processes
+
+> Work in progress in some of the features
 
 ## Installation & Usage
 
@@ -23,6 +24,7 @@ npm start
 ```
 
 ### Building the Application
+
 ```bash
 # Using electron-packager 
 npm run package
@@ -64,4 +66,3 @@ The application consists of:
 - `renderer.js` - Frontend logic and data display
 - `styles.css` - Modern styling and responsive design
 
-Modify these files to customize the application's functionality and appearance.
